@@ -1,5 +1,5 @@
 .delivering{
-  padding: 60px 15px 0;
+  padding: 60px 15px 120px;
   position: relative;
   &-steps{
     display: flex;
@@ -43,6 +43,11 @@
       line-height: 25px;
       margin-top: 12px;
       margin-bottom: 20px;
+    }
+  }
+  .accent-line{
+    &_icon{
+      left: 15px;
     }
   }
 }
