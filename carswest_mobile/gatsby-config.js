@@ -1,5 +1,7 @@
 'use strict'
 
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     title: 'gatsby-starter-typescript-plus',
@@ -74,7 +76,14 @@ module.exports = {
 				useMinify: true,
 				usePreload: true
 			}
-		},
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `assets`),
+      },
+    },
     'gatsby-plugin-emotion',
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',

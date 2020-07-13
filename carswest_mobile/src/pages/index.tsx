@@ -6,7 +6,10 @@ import Menu from '../components/Header/Menu'
 import Advantages from '../components/Advantages/Advantages'
 import Delivering from '../components/Delivering/Delivering'
 import AboutCompany from '../components/aboutCompany/aboutCompany'
+import InNumbers from '../components/InNumbers/InNumbers'
 import PopularCars from '../components/PopularCars/PopularCars'
+import Form from '../components/Form/Form'
+import Footer from '../components/Footer/Footer'
 
 import MainPageFirstScreen from '../components/FirstBlock/FirstBlock'
 import '../layouts.scss'
@@ -32,7 +35,16 @@ const IndexPage: React.FC = (): JSX.Element => {
         <AboutCompany />
       </section>
       <section>
+        <InNumbers />
+      </section>
+      <section>
         <PopularCars />
+      </section>
+      <section>
+        <Form />
+      </section>
+      <section>
+        <Footer />
       </section>
     </>
   )
