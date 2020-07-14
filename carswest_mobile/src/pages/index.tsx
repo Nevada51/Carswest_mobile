@@ -11,6 +11,7 @@ import PopularCars from '../components/PopularCars/PopularCars'
 import Form from '../components/Form/Form'
 import Footer from '../components/Footer/Footer'
 
+import ScrollableAnchor, { configureAnchors }  from 'react-scrollable-anchor'
 import MainPageFirstScreen from '../components/FirstBlock/FirstBlock'
 import '../layouts.scss'
 
@@ -18,29 +19,31 @@ const IndexPage: React.FC = (): JSX.Element => {
 
   const [isOpened, changeOpen] = useState<boolean>(false);
 
+  configureAnchors({})
+
   return (
     <>
-      <section>
-        <Header isOpened={isOpened} changeOpen={changeOpen}/>
-        <Menu isOpened={isOpened} changeOpen={changeOpen}/>
-        <MainPageFirstScreen />
+      <section id="top">
+          <Header isOpened={isOpened} changeOpen={changeOpen}/>
+          <Menu isOpened={isOpened} changeOpen={changeOpen}/>
+          <MainPageFirstScreen />
       </section>
-      <section>
+      <section id="advantages">
         <Advantages />
       </section>
-      <section>
+      <section id="delivering">
         <Delivering />
       </section>
-      <section>
+      <section id="aboutCompany">
         <AboutCompany />
       </section>
-      <section>
+      <section id="inNumbers">
         <InNumbers />
       </section>
-      <section>
+      <section id="popularCars">
         <PopularCars />
       </section>
-      <section>
+      <section id="form">
         <Form />
       </section>
       <section>

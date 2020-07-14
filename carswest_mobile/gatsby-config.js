@@ -84,11 +84,18 @@ module.exports = {
         path: path.join(__dirname, `src`, `assets`),
       },
     },
-    'gatsby-plugin-emotion',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: path.join(__dirname, `src`, `markdown-pages`),
+      },
+    },
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sass',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet'
+    'gatsby-plugin-react-helmet',
+    'gatsby-transformer-remark',
   ]
 }

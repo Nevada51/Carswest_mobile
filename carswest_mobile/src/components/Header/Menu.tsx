@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import './Menu.scss'
-import PhoneIcon from '../../assets/images/phone_icon.inline.svg'
+import PhoneIcon from '../../assets/images/phone_white.inline.svg'
 import MailIcon from '../../assets/images/mail_icon.inline.svg'
 import MapIcon from '../../assets/images/map_icon.inline.svg'
 import Logo from '../../assets/images/Logo.inline.svg'

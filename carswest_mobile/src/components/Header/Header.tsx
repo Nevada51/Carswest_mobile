@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import './Header.scss'
 import Logo from '../../assets/images/Logo.inline.svg'
-import PhoneIcon from '../../assets/images/phone_icon.inline.svg'
+import PhoneIcon from '../../assets/images/phone_white.inline.svg'
 import {IMenu} from './Types'
 
 const Header: React.FC<IMenu> = ({isOpened,changeOpen}): JSX.Element => {
