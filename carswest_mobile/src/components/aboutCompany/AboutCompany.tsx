@@ -1,5 +1,6 @@
 import React from 'react'
 import './AboutCompany.scss'
+import Carousel from './Carousel';
 
 const AboutCompany: React.FC = (): JSX.Element => {
   return (
@@ -11,7 +12,7 @@ const AboutCompany: React.FC = (): JSX.Element => {
         Мы оказываем услуги по подбору и пригону авто из США в Украину. Сайт нашей компании зарегистрирован еще в 2005 году, и это делает нашу компанию одной из самой "долгоживущей" на рынке.
       </p>
       <div className="about-company_slider">
-
+        <Carousel />
       </div>
     </div>
   )

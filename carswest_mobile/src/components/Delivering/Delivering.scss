@@ -48,6 +48,9 @@
   .accent-line{
     &_icon{
       left: 15px;
+      & > svg{
+        top: 7px;
+      }
     }
   }
 }

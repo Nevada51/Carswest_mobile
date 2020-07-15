@@ -54,6 +54,8 @@ const Form: React.FC = (): JSX.Element => {
         }
       }
     }
+    else if (['Backspace','Delete'].includes(e.key))
+      setPhone(phone.slice(0,-1))
   }
 
   return (
@@ -79,8 +81,8 @@ const Form: React.FC = (): JSX.Element => {
             type="text"
             placeholder="Введите Ваш Номер телефона"
             value={phone}
-            onChange={()=>{}}
-            // onKeyDown={handlePhoneMaskedInput}
+            // onChange={()=>{}}
+            onKeyDown={handlePhoneMaskedInput}
           />
         </div>
         <div className="form-fields-wrapper form-fields-wrapper-button ">

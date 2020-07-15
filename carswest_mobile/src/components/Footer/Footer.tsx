@@ -53,10 +53,6 @@ const Footer: React.FC = (): JSX.Element => {
         <Scrollchor to="#contacts">Контакты</Scrollchor>
       </ul>
 
-      <div className="footer-form">
-        <h4>ПОДПИШИТЕСЬ НА ЭКСКЛЮЗИВНЫЕ НОВОСТИ, И ПРЕДЛОЖЕНИЯ</h4>
-      </div>
-
       <div className="work-time">
         <h4 className="work-time_title">ГРАФИК РАБОТЫ</h4>
         <span className="work-time_item">Пн-Пт 9:00-19:00</span>

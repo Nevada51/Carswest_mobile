@@ -5,53 +5,32 @@ import './Carousel.scss';
 
 const PICTURE_QUERY = graphql`
 query PictureQuery {
-    markdownRemark {
-      frontmatter {
-        cars {
-          name
-          priceUSU
-          priceUkraine
-          image {
-            childImageSharp {
-              fluid {
-                src
-              }
+  markdownRemark(fileAbsolutePath: {regex: "/cars-info/"}) {
+    frontmatter {
+      cars {
+        name
+        priceUSU
+        priceUkraine
+        image
+        {
+          childImageSharp
+          {
+            fluid
+            {
+              src
             }
           }
         }
       }
     }
   }
-  `
-
-  const getConfigurableProps = () => ({
-    showArrows: boolean('showArrows', true, tooglesGroupId),
-    showStatus: boolean('showStatus', false, tooglesGroupId),
-    showIndicators: boolean('showIndicators', true, tooglesGroupId),
-    infiniteLoop: boolean('infiniteLoop', true, tooglesGroupId),
-    showThumbs: boolean('showThumbs', true, tooglesGroupId),
-    useKeyboardArrows: boolean('useKeyboardArrows', true, tooglesGroupId),
-    autoPlay: boolean('autoPlay', true, tooglesGroupId),
-    stopOnHover: boolean('stopOnHover', true, tooglesGroupId),
-    swipeable: boolean('swipeable', true, tooglesGroupId),
-    dynamicHeight: boolean('dynamicHeight', true, tooglesGroupId),
-    emulateTouch: boolean('emulateTouch', true, tooglesGroupId),
-    thumbWidth: number('thumbWidth', 100, {}, valuesGroupId),
-    selectedItem: number('selectedItem', 0, {}, valuesGroupId),
-    interval: number('interval', 3000, {}, valuesGroupId),
-    transitionTime: number('transitionTime', 150, {}, valuesGroupId),
-    swipeScrollTolerance: number('swipeScrollTolerance', 5, {}, valuesGroupId),
-});
-
-
-
+}
+`
 
 export default () => {
     const {markdownRemark:{frontmatter:{cars}}} = useStaticQuery(PICTURE_QUERY);
 
-    console.log({markdownRemark:{frontmatter:{cars}}});
-
-    const customRenderThumb = (children) =>
+    const customRenderThumb = () =>
     cars.map(({name, priceUkraine, priceUSU, image:{childImageSharp:{fluid:{src}}}})  =>
 
        <div className="thumbnails-slide" key={name}>

@@ -2,7 +2,7 @@ import React from 'react'
 import './FirstBlock.scss'
 import AccentIcon from '../../assets/images/logistics_icon.inline.svg'
 import ScroolDown from '../../assets/images/scroll_down.inline.svg'
-
+import Scrollchor from 'react-scrollchor';
 
 const MainPageFirstScreen: React.FC = (): JSX.Element => {
   return (
@@ -21,8 +21,8 @@ const MainPageFirstScreen: React.FC = (): JSX.Element => {
               <p className="main-info_subtitle">Мы поможем Вам подобрать, приобрести и экспортировать любое транспортное средство.</p>
 
               <div className="btns-wrapper">
-                <button type="button" className="btn btn-color">Связаться с нами</button>
-                <button type="button" className="btn">Получить просчёт</button>
+                <Scrollchor to="#form"><button type="button" className="btn btn-color">Связаться с нами</button></Scrollchor>
+                <Scrollchor to="#form"><button type="button" className="btn">Получить просчёт</button></Scrollchor>
               </div>
 
               <div className="accent-line">

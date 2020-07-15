@@ -3,7 +3,7 @@ var React = require('react');
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Carousel from './Carousel';
 import './PopularCars.scss';
-import './imgArr.ts';
+
 // import { images } from './imgArr';
 // import { graphql } from "gatsby";
 

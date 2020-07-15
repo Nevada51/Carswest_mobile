@@ -1,39 +1,6 @@
-.background-circle{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 260px;
-  height: 260px;
-  background: rgba(86, 185, 255, 0.6);
-  z-index: 1;
-  border-radius: 50%;
-}
 
-.name{
-  z-index: 2;
-  position: relative;
-  font-family: var(--font-openSans);
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  color: var(--white-color);
-}
 
-.price{
-  z-index: 2;
-  position: relative;
-  font-family: var(--font-lato);
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  color: var(--white-color);
-  margin-bottom: 5px;
-}
-
-.carousel{
+.popular-cars .carousel{
   .slide{
     background-color: transparent;
     & > div{
@@ -84,6 +51,40 @@
     &:hover{
       background: none;
     }
+  }
+  .background-circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 260px;
+    height: 260px;
+    background: rgba(86, 185, 255, 0.6);
+    z-index: 1;
+    border-radius: 50%;
+  }
+
+  .name{
+    z-index: 2;
+    position: relative;
+    font-family: var(--font-openSans);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--white-color);
+  }
+
+  .price{
+    z-index: 2;
+    position: relative;
+    font-family: var(--font-lato);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+    color: var(--white-color);
+    margin-bottom: 5px;
   }
 }
 
