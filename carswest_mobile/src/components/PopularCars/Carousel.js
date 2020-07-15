@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery,  graphql } from 'gatsby';
 import { Carousel } from 'react-responsive-carousel';
+import './Carousel.scss';
 
 const PICTURE_QUERY = graphql`
 query PictureQuery {
@@ -23,10 +24,6 @@ query PictureQuery {
   }
   `
 
-  const tooglesGroupId = 'Toggles';
-  const valuesGroupId = 'Values';
-  const mainGroupId = 'Main';
-  
   const getConfigurableProps = () => ({
     showArrows: boolean('showArrows', true, tooglesGroupId),
     showStatus: boolean('showStatus', false, tooglesGroupId),
@@ -51,16 +48,32 @@ query PictureQuery {
 
 export default () => {
     const {markdownRemark:{frontmatter:{cars}}} = useStaticQuery(PICTURE_QUERY);
-    // console.log({allFile:{edges}});
-    // const { markdownRemark } = data
-    // const { frontmatter, html } = markdownRemark
+
+    console.log({markdownRemark:{frontmatter:{cars}}});
+
+    const customRenderThumb = (children) =>
+    cars.map(({name, priceUkraine, priceUSU, image:{childImageSharp:{fluid:{src}}}})  =>
+
+       <div className="thumbnails-slide" key={name}>
+        <p className="name">{name}</p>
+        <div className="thumbnail-wrapp">
+          <img className = "thumbnail-img" alt="{name}" src={src} />
+        </div>
+        <p className="price usa">{priceUSU}</p>
+        <p className="price ukraine">{priceUkraine}</p>
+      </div>
+
+    );
 
     return (
-        <Carousel {...getConfigurableProps()}>
+        <Carousel autoPlay={false} showStatus={false} showIndicators={false} infiniteLoop={true} renderThumbs={customRenderThumb} thumbWidth={170}>
             {cars.map(({name, priceUkraine, priceUSU, image:{childImageSharp:{fluid:{src}}}})  =>
              <div key={name}>
-                <p className="nmae">{name}</p>
-                <img alt="" src={src} />
+                <div className="background-circle"></div>
+                <p className="name">{name}</p>
+                <div className="main-img-wrapp">
+                  <img className = "main-img" alt="{name}" src={src} />
+                </div>
                 <p className="price usa">{priceUSU}</p>
                 <p className="price ukraine">{priceUkraine}</p>
              </div>)}
@@ -68,4 +81,4 @@ export default () => {
     );
 }
 
-// {edges.map(({node:{id,childImageSharp:{fluid:{src}},}}) => 
+

@@ -1,0 +1,134 @@
+.background-circle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 260px;
+  background: rgba(86, 185, 255, 0.6);
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.name{
+  z-index: 2;
+  position: relative;
+  font-family: var(--font-openSans);
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: var(--white-color);
+}
+
+.price{
+  z-index: 2;
+  position: relative;
+  font-family: var(--font-lato);
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: var(--white-color);
+  margin-bottom: 5px;
+}
+
+.carousel{
+  .slide{
+    background-color: transparent;
+    & > div{
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .slider-wrapper{
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    .slider{
+      // min-width: 300px;
+      // min-height: 300px;
+    }
+  }
+  .main-img-wrapp{
+    z-index: 2;
+    position: relative;
+    height: 150px;
+    max-width: 248px;
+    margin: 4px 0;
+    .main-img{
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &.carousel-slider .control-arrow{
+    outline: none;
+    &::before{
+      width: 20px;
+      height: 20px;
+      margin: 0;
+      border: none;
+      background-image: url(../../assets/images/arrow-right.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      outline: none;
+    }
+    &.control-next{
+
+    }
+    &.control-prev{
+      transform: rotate(180deg);
+    }
+    &:hover{
+      background: none;
+    }
+  }
+}
+
+
+// ----- стили превюшек
+.thumbs-wrapper{
+  height: auto;
+  .thumb{
+    border: none;
+    padding: 0 10px;
+    margin-right: 0;
+  }
+  .name{
+    font-size: 10px;
+    line-height: 14px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .price{
+    font-size: 10px;
+    line-height: 14px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .thumbnail-wrapp{
+    height: 120px;
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    margin: 0 auto;
+    filter: brightness(0.6);
+    img{
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .control-arrow{display: none;}
+}
+.carousel {
+  .thumbs-wrapper{
+    margin: 20px 0;
+  }
+  .thumb.selected{
+    border: none;
+  }
+  .carousel .thumb:hover{
+    border: none;
+  }
+}
+
