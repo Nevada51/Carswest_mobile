@@ -1,0 +1,29 @@
+.ThanksMessage{
+  padding: 60px 15px;
+  h1{
+    font-family: var(--font-openSans);
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 36px;
+    text-align: center;
+    color: var(--white-color);
+    margin: 0 0 60px;
+  }
+  .btn{
+    font-family: var(--font-lato);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid rgba(86, 185, 255, 0.9);
+    padding: 16px 0 19px;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}

@@ -42,7 +42,7 @@ const Footer: React.FC = (): JSX.Element => {
         </ul>
       </div>
 
-      <h4 className="links-list-title">Дополнительные страницы</h4>
+      {/* <h4 className="links-list-title">Дополнительные страницы</h4>
       <ul className="links-list">
         <Scrollchor to="#top">Главная</Scrollchor>
         <Scrollchor to="#advantages">Преимущества сотрудничества с нами</Scrollchor>
@@ -51,7 +51,7 @@ const Footer: React.FC = (): JSX.Element => {
         <Scrollchor to="#popularCars">Популярные авто из США</Scrollchor>
         <Scrollchor to="#form">Заявка на выгодные предложения</Scrollchor>
         <Scrollchor to="#contacts">Контакты</Scrollchor>
-      </ul>
+      </ul> */}
 
       <div className="work-time">
         <h4 className="work-time_title">ГРАФИК РАБОТЫ</h4>

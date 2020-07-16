@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import { navigate } from 'gatsby'
 import './Form.scss'
 
 const Form: React.FC = (): JSX.Element => {
 
+  const [isSended, changeSended] = useState(false)
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
   const [errFields, changeErrFields] = useState<string[]>([])
@@ -10,15 +12,21 @@ const Form: React.FC = (): JSX.Element => {
   const send = (e: React.MouseEvent) => {
     e.preventDefault()
     if (name.length > 2 && /^\+38 \(\d{3}\) \d{3}-\d{2}-\d{2}$/.test(phone)) {
+      const url = 'https://admin.webrains.studio/sendCFWMessage'
       const body = {
         name,
         phone
       }
-      fetch('/api/sendMail', {
+      fetch(url, {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify(body)
       })
-        .then(response => {})
+        .then(response => {
+          navigate('/thanks')
+        })
         .catch(err => {})
         .finally(() => {})
     } else {
@@ -86,7 +94,7 @@ const Form: React.FC = (): JSX.Element => {
           />
         </div>
         <div className="form-fields-wrapper form-fields-wrapper-button ">
-          <input className="form-fields-submit" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ НА ПРОЕКТ" onClick={send} />
+          <input className="form-fields-submit" type="submit" disabled={isSended} value="ОТПРАВИТЬ ЗАЯВКУ НА ПРОЕКТ" onClick={send} />
         </div>
       </form>
     </div>

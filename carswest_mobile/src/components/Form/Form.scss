@@ -54,6 +54,8 @@
 
     position: relative;
     outline: none;
+    pointer-events: all;
+    user-select: all;
   }
   .form-fields-submit{
     background: linear-gradient(172.58deg, rgba(171, 220, 255, 0.8) 0%, rgba(3, 150, 255, 0.8) 100%);
@@ -69,6 +71,8 @@
     border: none;
     display: block;
     cursor: pointer;
+    pointer-events: all;
+    user-select: all;
   }
 
 }
