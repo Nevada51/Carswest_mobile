@@ -3,6 +3,7 @@ import './Advantages.scss'
 import SupportIcon from '../../assets/images/support_icon.inline.svg'
 import ShieldIcon from '../../assets/images/shield_icon.inline.svg'
 import ShipIcon from '../../assets/images/ship_icon.inline.svg'
+import AgreementIcon from '../../assets/images/agreement_icon.inline.svg'
 
 const Advantages: React.FC = (): JSX.Element => {
   return (
@@ -25,7 +26,7 @@ const Advantages: React.FC = (): JSX.Element => {
           <div className="advantages-item_text">Мы гарантируем безопасную доставку авто в морских контейнерах. Если возникают дополнительные повреждения Вашего авто во время перевозки по океану, мы компенсируем затраты или совершаем ремонт за свой счет. Также помогаем оформить все необходимые страховки на время перевозки океаном.</div>
         </div>
         <div className="advantages-item">
-          <div className="advantages-item_img"><SupportIcon /></div>
+          <div className="advantages-item_img"><AgreementIcon /></div>
           <h4 className="advantages-item_title">Уважение и доверие клиентов</h4>
           <div className="advantages-item_text">Каждое третье авто, которое у нас заказывают - это или повторная покупка клиента, или мы совершаем покупку для клиента, который пришел к нам по рекомендации других довольных покупателей. Согласитесь, это самый лучший показатель доверия к компании!</div>
         </div>

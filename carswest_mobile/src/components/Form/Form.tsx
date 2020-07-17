@@ -89,7 +89,7 @@ const Form: React.FC = (): JSX.Element => {
             type="text"
             placeholder="Введите Ваш Номер телефона"
             value={phone}
-            // onChange={()=>{}}
+            onChange={()=>{}}
             onKeyDown={handlePhoneMaskedInput}
           />
         </div>

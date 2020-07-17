@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.scss'
 import { Link } from 'gatsby'
-import Scrollchor from 'react-scrollchor';
+import {IFooter} from './Types'
 
 import PhoneWhiteIcon from '../../assets/images/phone_white.inline.svg'
 import MailIcon from '../../assets/images/mail_icon.inline.svg'
@@ -10,13 +10,13 @@ import Logo from '../../assets/images/Logo.inline.svg'
 import Message from '../../assets/images/message_icon.inline.svg'
 
 import Telegram from '../../assets/images/telegram.inline.svg'
-import Instagram from '../../assets/images/instagram.inline.svg'
+import Viber from '../../assets/images/viber.inline.svg'
 import Youtube from '../../assets/images/youTube.inline.svg'
 import Facebook from '../../assets/images/facebook.inline.svg'
 
 
 
-const Footer: React.FC = (): JSX.Element => {
+const Footer: React.FC<IFooter> = ({numberIsShowed, showNumber}): JSX.Element => {
 
   return (
     <>
@@ -60,19 +60,28 @@ const Footer: React.FC = (): JSX.Element => {
       </div>
 
       <div className="support-service">
-        <a href="tel:+0800215804" className="support-service_icon">
-          <Message />
-        </a>
-        <div className="support-service-text">Служба поддержки</div>
+
+        <div className={`card  ${numberIsShowed? 'is-flipped': ''}`}>
+
+          <div className="card__face card__face--front " onClick={() => {showNumber(!numberIsShowed)}}>
+            <div  className="support-service_icon">
+              <Message />
+            </div>
+            Служба поддержки
+          </div>
+          <a href="tel:+0800215804" className="card__face card__face--back" >0 800 215 804</a>
+
+        </div>
+
       </div>
 
       <div className="footer-social">
         <div className="footer-social-title">ПОДПИСЫВАЙТЕСЬ НА НАС</div>
         <div className="footer-social_list">
-          <a href="#" className="footer-social_item"><Telegram/></a>
-          <a href="#" className="footer-social_item"><Instagram/></a>
-          <a href="#" className="footer-social_item"><Youtube/></a>
-          <a href="#" className="footer-social_item"><Facebook/></a>
+          <a href="tg://join?invite=AAAAAD9TKVdDMSjyAzajbA" className="footer-social_item"><Telegram/></a>
+          <a href="viber://pa?chatURI=g2=AQBLa8pEgubawksbBvp5mt6npWDP6%2BzZW%2FOuwkQW14mbTlySN2ULOEuIbgSYdJnk" className="footer-social_item"><Viber/></a>
+          <a href="https://www.youtube.com/channel/UCf7O2HFJfH3LStHbq7_2UoA" className="footer-social_item"><Youtube/></a>
+          <a href="https://www.facebook.com/carsfromwest.kiev.ua/" className="footer-social_item"><Facebook/></a>
         </div>
       </div>
     </footer>

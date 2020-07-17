@@ -16,7 +16,7 @@ const Header: React.FC<IMenu> = ({isOpened,changeOpen}): JSX.Element => {
       </div>
       <div className="phone">
         <a href="tel:+0800215804">0 800 215 804</a>
-        <div className="phone_subtext">бусплатно по Украине</div>
+        <div className="phone_subtext">бесплатно по Украине</div>
       </div>
       <div className="phone-icon">
         <a href="tel:+0800215804">

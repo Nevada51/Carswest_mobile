@@ -18,6 +18,7 @@ import '../layouts.scss'
 const IndexPage: React.FC = (): JSX.Element => {
 
   const [isOpened, changeOpen] = useState<boolean>(false);
+  const [numberIsShowed, showNumber] = useState<boolean>(false);
 
   configureAnchors({})
 
@@ -47,7 +48,7 @@ const IndexPage: React.FC = (): JSX.Element => {
         <Form />
       </section>
       <section>
-        <Footer />
+        <Footer numberIsShowed={numberIsShowed} showNumber={showNumber}/>
       </section>
     </>
   )

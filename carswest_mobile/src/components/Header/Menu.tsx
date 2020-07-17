@@ -18,7 +18,7 @@ const Menu: React.FC<IMenu> = ({isOpened,changeOpen}): JSX.Element => {
         </div>
         <div className="phone">
           <a href="tel:+0800215804">0 800 215 804</a>
-          <div className="phone_subtext">бусплатно по Украине</div>
+          <div className="phone_subtext">бесплатно по Украине</div>
         </div>
         <div className="menu-top_close" onClick={() => changeOpen(!isOpened)}></div>
       </div>
@@ -28,7 +28,7 @@ const Menu: React.FC<IMenu> = ({isOpened,changeOpen}): JSX.Element => {
           <a href="">Преимущества сотрудничества С НАМИ</a>
           <a href="">Процесс доставки авто из США</a>
           <a href="">О нашей компании</a>
-          <a href="">Популярные авто из Сша</a>
+          <a href="">Популярные авто из США</a>
           <a href="">Заявка на выгодные предложения</a>
           <a href="">Контакты</a>
         </ul>
